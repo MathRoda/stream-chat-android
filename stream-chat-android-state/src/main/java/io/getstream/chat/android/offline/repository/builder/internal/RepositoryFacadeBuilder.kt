@@ -18,7 +18,6 @@ package io.getstream.chat.android.offline.repository.builder.internal
 
 import android.content.Context
 import io.getstream.chat.android.client.models.Config
-import io.getstream.chat.android.client.models.User
 import io.getstream.chat.android.client.persistance.repository.factory.RepositoryFactory
 import io.getstream.chat.android.core.internal.InternalStreamChatApi
 import kotlinx.coroutines.CoroutineScope
@@ -34,15 +33,12 @@ public class RepositoryFacadeBuilder {
     }
 
     private var context: Context? = null
-    private var currentUser: User? = null
     private var coroutineScope: CoroutineScope? = null
     private var defaultConfig: Config? = null
     private var repositoryFactory: RepositoryFactory? = null
 
     @InternalStreamChatApi
     public fun context(context: Context): RepositoryFacadeBuilder = apply { this.context = context }
-    @InternalStreamChatApi
-    public fun currentUser(user: User): RepositoryFacadeBuilder = apply { this.currentUser = user }
     @InternalStreamChatApi
     public fun scope(scope: CoroutineScope): RepositoryFacadeBuilder = apply { this.coroutineScope = scope }
     @InternalStreamChatApi

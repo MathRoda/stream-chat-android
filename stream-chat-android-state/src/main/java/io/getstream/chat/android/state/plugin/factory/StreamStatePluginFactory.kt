@@ -155,7 +155,6 @@ public class StreamStatePluginFactory(
                     muteEnabled = true
                 )
             )
-            currentUser(user)
             repositoryFactory(repositoryFactory)
         }.build()
 
